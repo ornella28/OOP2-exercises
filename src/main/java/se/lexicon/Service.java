@@ -13,4 +13,32 @@ public abstract class Service {
         this.name = name;
         this.basePrice = basePrice;
     }
+
+    // Getters
+
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getBasePrice() {
+        return basePrice;
+    }
+
+    public abstract double calculatePrice();
+
+    public abstract int getDurationInMinutes();
+
+    @Override
+    public String toString() {
+        return "Service{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", basePrice=" + basePrice +
+                '}';
+    }
 }
