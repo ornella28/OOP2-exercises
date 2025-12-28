@@ -4,11 +4,11 @@ public abstract class Service {
 
     private final int id;
     private final String name;
-    private  final double basePrice;
+    private  final int basePrice;
 
     // Constructor
 
-    public Service(int id, String name, double basePrice) {
+    public Service(int id, String name, int basePrice) {
         this.id = id;
         this.name = name;
         this.basePrice = basePrice;
@@ -25,11 +25,11 @@ public abstract class Service {
         return name;
     }
 
-    public double getBasePrice() {
+    public int getBasePrice() {
         return basePrice;
     }
 
-    public abstract double calculatePrice();
+    public abstract int calculatePrice();
 
     public abstract int getDurationInMinutes();
 

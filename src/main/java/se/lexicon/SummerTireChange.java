@@ -2,7 +2,9 @@ package se.lexicon;
 
 public class SummerTireChange extends Service{
 
-    public SummerTireChange(int id, String name, double basePrice) {
+    private static final int discount = 200;
+
+    public SummerTireChange(int id, String name, int basePrice) {
         super(id, name, basePrice);
     }
 
@@ -12,8 +14,8 @@ public class SummerTireChange extends Service{
     }
 
     @Override
-    public double calculatePrice() {
-        return getBasePrice(); // No increase for summer
+    public int calculatePrice() {
+        return getBasePrice() - discount;
     }
 
 
